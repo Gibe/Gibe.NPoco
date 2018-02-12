@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.0;net45</TargetFrameworks>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<PackageId>Gibe.NPoco</PackageId>
+		<PackageVersion>3.0.0</PackageVersion>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageTags>Gibe NPoco</PackageTags>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NPoco" Version="3.9.3" />
+  </ItemGroup>
+	
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0'">
+		<DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net45'">
+		<DefineConstants>NET45;NETFULL</DefineConstants>
+	</PropertyGroup>
+</Project>

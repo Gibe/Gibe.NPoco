@@ -6,7 +6,7 @@
 
 	<PropertyGroup>
 		<PackageId>Gibe.NPoco</PackageId>
-		<PackageVersion>$version$</PackageVersion>
+		<PackageVersion>3.0.0</PackageVersion>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<PackageTags>Gibe NPoco</PackageTags>
 	</PropertyGroup>

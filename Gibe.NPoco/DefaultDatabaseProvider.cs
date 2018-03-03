@@ -37,7 +37,7 @@ namespace Gibe.NPoco
 		
 		public IDatabase GetDatabase()
 		{
-			return new Database(new SqlConnection(_connectionString), _databaseType);
+			return new Database(_connectionString, _databaseType, SqlClientFactory.Instance);
 		}
 #endif
 	}

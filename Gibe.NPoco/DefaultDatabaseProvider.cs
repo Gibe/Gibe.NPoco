@@ -27,17 +27,17 @@ namespace Gibe.NPoco
 
 #if NETCORE
 		private readonly string _connectionString;
+		private readonly DatabaseType _databaseType;
 
-		public DefaultDatabaseProvider(string connectionString)
+		public DefaultDatabaseProvider(string connectionString, DatabaseType databaseType)
 		{
 			_connectionString = connectionString;
+			_databaseType = databaseType;
 		}
 		
 		public IDatabase GetDatabase()
 		{
-			var connection = new SqlConnection(_connectionString);
-			connection.Open();
-			return new Database(connection);
+			return new Database(new SqlConnection(_connectionString), _databaseType);
 		}
 #endif
 	}
